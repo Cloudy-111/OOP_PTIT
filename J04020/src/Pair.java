@@ -16,6 +16,7 @@ public class Pair<F, S> {
     }
     public Boolean isPrime(){
         if(first instanceof Integer &&  second instanceof Integer)if(Prime((Integer)first) && Prime((Integer)second))return true;
+        //instanceof dùng để so sánh kiểu dữ liệu, trả về true hoặc false
         return false;
     }
     @Override
