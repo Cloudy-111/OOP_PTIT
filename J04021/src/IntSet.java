@@ -27,6 +27,7 @@ public class IntSet {
         for(Integer i : this.array)ts.add(i);
         Integer[] res = ts.toArray(new Integer[ts.size()]);//tạo mảng có độ dài bằng treeset
         return new IntSet(Arrays.stream(res).mapToInt(Integer::intValue).toArray());//chuyển mảng Integer sang mảng int
+        //có thể chuyển từng phần tử của mảng Integer sang mảng int qua int_array[i] = Integer_array[i]
     }
     @Override
     public String toString(){
