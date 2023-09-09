@@ -11,10 +11,10 @@ public class Main {
         // TODO code application logic here
         ObjectInputStream os = new ObjectInputStream(new FileInputStream("DATA.in"));
         ArrayList<Integer> lst = (ArrayList<Integer>)os.readObject();
-        int[] prime = new int[1000001];
+        int[] prime = new int[1000005];
         for(Integer i : lst)if(isPrime(i))prime[i]++;
         int cnt = 1;
-        for(int i = 1000001; i >= 2; ++i)if(prime[i] > 0 && cnt < 10){
+        for(int i = 1000001; i >= 2; --i)if(prime[i] > 0 && cnt <= 10){
             System.out.println(i + " " + prime[i]);
             cnt += 1;
         }
