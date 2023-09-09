@@ -1,4 +1,3 @@
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -18,10 +17,10 @@ public class Main {
         Collections.sort(lst1);
         int[] f = new int[1000005];
         for(Integer i : lst1){
-            if(f[i] != 0 && isPrime(i)){
+            if(f[i] == 0 && isPrime(i)){
                 int j = X - i;
                 if(isPrime(j))
-                    if(lst2.contains(j)){
+                    if(lst2.contains(j) && i < j){
                         System.out.println(i + " " + j);
                         f[i] = 1;
                         f[j] = 1;
