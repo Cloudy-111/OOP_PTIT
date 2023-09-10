@@ -24,6 +24,7 @@ public class Main {
             if(res.size() == 10)break;
         }
         for(Integer i : res){
+            //dùng mảng f để đếm số lần xuất hiện cũng được, viết hơi dài thôi
             int f = Collections.frequency(lst1, i) + Collections.frequency(lst2, i);
             System.out.println(i + " " + f);
         }
