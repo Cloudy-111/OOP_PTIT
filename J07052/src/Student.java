@@ -40,9 +40,12 @@ public class Student implements Comparable<Student>{
         return this.id;
     }
     @Override
-    public int compareTo(Student b){
-        if(b.getSum() != this.sum)return (int)(b.getSum() - this.sum);
-        return this.id.compareTo(b.getId());
+    public int compareTo(Student b) {
+       if(sum > b.getSum())
+           return -1;
+       else if(sum < b.getSum())
+           return 1;
+        return id.compareTo(b.getId());
     }
     @Override
     public String toString(){
