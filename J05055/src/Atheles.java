@@ -1,7 +1,5 @@
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Atheles implements Comparable<Atheles>{
     private int id, ord;
