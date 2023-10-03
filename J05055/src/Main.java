@@ -20,14 +20,14 @@ public class Main {
         }
         Collections.sort(tmp);
         int cnt = 1;
-        double curr = tmp.get(0).getResult();
+        long curr = tmp.get(0).getResult();
         int d = 0;
         for(Atheles i : tmp){
             if(i.getResult()!= curr){
-                curr = Math.min(curr, i.getResult());
+                curr = Math.max(curr, i.getResult());
                 cnt += d;
                 d = 1;
-            } 
+            }
             else d += 1;
             i.setOrd(cnt);
         }
