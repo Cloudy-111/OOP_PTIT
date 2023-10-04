@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -20,10 +21,11 @@ public class Main {
             Match a = new Match(tmp[0], Long.parseLong(tmp[1]));
             for(CLB i : lst1)if(a.getIdClb().equals(i.getId())){
                 a.setName(i.getName());
-                a.setNumOfFan(i.getNum());
+                a.setRes(i.getNum());
             }
             lst2.add(a);
         }
+        Collections.sort(lst2);
         for(Match i : lst2)System.out.println(i);
     }
     
